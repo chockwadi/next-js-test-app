@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import Layout from "../components/Layout/index";
+import Layout from "../components/Layout/index.tsx";
 import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
