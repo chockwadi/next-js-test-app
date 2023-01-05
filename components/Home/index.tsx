@@ -1,8 +1,9 @@
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from "react";
 import { gistGistListByUserName } from "../../services/api/gist";
 import GistList from "../GistList";
 import styles from "./home.module.scss";
-
 
 const Home = () => {
     const [gist, setGist] = useState<any>([]);
@@ -22,6 +23,7 @@ const Home = () => {
             <div className={styles.search_container}>
                 <form onSubmit={onSubmitHandler}>
                     <div className={styles.search}>
+
                         <input
                             type="text"
                             onChange={onChangeHandler}
@@ -30,7 +32,8 @@ const Home = () => {
                             placeholder="type user name here..."
                         />
                         <button type="submit" className={styles.searchButton}>
-                            submit
+                            <FontAwesomeIcon icon={faSearch} color="#fff" style={{ fontSize: '14px' }} />
+                            {/* submit */}
                         </button>
                     </div>
                 </form>
